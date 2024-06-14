@@ -11,4 +11,16 @@
 
 (() => {
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        var mdp = document.getElementById('pass-one').value;
+        var mdpc = document.getElementById('pass-two').value;
+        if (mdp !== mdpc){
+            document.getElementById('pass-one').style.borderColor = 'red';
+            document.getElementById('pass-two').style.borderColor = 'red';
+        }
+        else{
+            document.getElementById('pass-one').style.borderColor = 'green';
+            document.getElementById('pass-two').style.borderColor = 'green';
+        }
+    })
 })();

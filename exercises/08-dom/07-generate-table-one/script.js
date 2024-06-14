@@ -11,4 +11,12 @@
 
 (() => {
     // your code here
+    var table = '<table>' + 
+        Array.from({length: 10},
+             () => '<tr>' + 
+        Array.from({length: 10},
+             () => "<td>0</td>" ).join('')
+             + '</tr>').join('')
+             + '</table>';
+    document.getElementById('target').innerHTML = table;
 })();

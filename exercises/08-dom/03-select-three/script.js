@@ -11,4 +11,13 @@
 
 (() => {
     // your code here
+    /*var tar = document.getElementsByClassName('target');
+    console.log(tar);
+    for(i=0; i<tar.length;i++){
+        tar[i].innerHTML = "owned";
+    }*/
+   var tar = document.querySelectorAll('.target');
+   tar.forEach(element => {
+    element.innerHTML = "owned";
+   });
 })();

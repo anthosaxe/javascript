@@ -11,4 +11,18 @@
 
 (() => {
     // your code here
+    var tabm = '<table>';
+
+
+    for(i = 0; i<=10;i++){
+        tabm += '<tr>' + '<td>' + i + '</td>';
+        for(j=0;j<=10;j++){
+            tabm += '<td>' + (i*j) + '</td>';
+        }
+        tabm += '</tr>';
+    }
+
+    tabm += '</table>';
+
+    document.getElementById('target').innerHTML = tabm;
 })();

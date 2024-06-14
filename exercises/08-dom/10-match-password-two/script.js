@@ -9,6 +9,18 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
+
 (() => {
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        var mdp = document.getElementById('pass-one').value;
+        var mdpc = document.getElementById('pass-two').value;
+        if (mdp !== mdpc) {
+            document.getElementById('pass-one').classList.add('error');
+            console.log(document.getElementById('pass-one').classList);
+            document.getElementById('pass-two').classList.add('error');
+            console.log(document.getElementById('pass-two').classList);
+        }
+    })
 })();
+
