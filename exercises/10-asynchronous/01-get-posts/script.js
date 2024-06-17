@@ -11,4 +11,19 @@
 
 (() => {
     // your code here
+    const button = document.getElementById('run');
+
+    // Fonction de callback pour traiter les articles
+    function handlePosts(error, posts) {
+        if (error) {
+            console.error('An error occurred:', error);
+        } else {
+            console.log('Articles:', posts);
+        }
+    }
+
+    // Ajouter un événement de clic au bouton
+    button.addEventListener('click', () => {
+        window.lib.getPosts(handlePosts);
+    });
 })();

@@ -10,5 +10,8 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById('slider').addEventListener('input', function() {
+        const value = parseInt(this.value, 10);
+        document.getElementById('target').textContent = '+' + value;
+    });
 })();

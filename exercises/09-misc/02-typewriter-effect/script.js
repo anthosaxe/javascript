@@ -11,4 +11,18 @@
 
 (() => {
     // your code here
+    const text = document.getElementById('target').textContent;
+    const writingEffect = document.getElementById("target");
+    writingEffect.innerHTML = "";
+
+    let i = 0;
+    function writeText() {
+        if (i < text.length) {
+            writingEffect.innerHTML += text[i];
+            i++;
+            setTimeout(writeText, Math.random() * 100);
+        }
+    }
+
+    writeText();
 })();

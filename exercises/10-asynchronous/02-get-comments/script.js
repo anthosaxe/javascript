@@ -11,4 +11,33 @@
 
 (() => {
     // your code here
+    const button = document.getElementById('run')
+
+    button.addEventListener('click', () => {
+        window.lib.getPosts((error, posts) => {
+            if (error) {
+                console.error(error);
+                return;
+            }
+
+            let remaining = posts.length;
+
+            posts.forEach(post => {
+                window.lib.getComments(post.id, (error, comments) => {
+                    if (error) {
+                        console.error(error);
+                        return;
+                    }
+
+                    post.comments = comments;
+                    remaining--;
+
+                    if (remaining === 0) {
+                        console.log(posts);
+                    }
+                });
+            });
+        });
+    })
+
 })();
